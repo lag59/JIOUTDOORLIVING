@@ -132,6 +132,7 @@
       background: var(--cream);
       color: var(--charcoal);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     img {
@@ -188,6 +189,7 @@
       display: flex;
       align-items: center;
       gap: 34px;
+      margin-left: auto;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0.02em;
@@ -911,6 +913,7 @@
 
       .section-heading h2 {
         font-size: 1.8rem;
+        white-space: normal;
       }
 
       .service-grid {
@@ -928,6 +931,11 @@
       .value-card {
         border-right: 0;
         border-bottom: 1px solid rgba(255,255,255,.22);
+      }
+
+      .contact-logo {
+        width: 200px;
+        padding: 18px;
       }
 
       .contact-info {
@@ -960,10 +968,6 @@
         />
       </a>
 
-      <button class="menu-toggle" id="menuToggle">
-        ☰
-      </button>
-
       <nav class="nav-links" id="navLinks">
         <a href="#home" data-en="HOME" data-es="INICIO">HOME</a>
         <a href="#about" data-en="ABOUT" data-es="NOSOTROS">ABOUT</a>
@@ -979,6 +983,7 @@
 
       <div class="nav-right">
         <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar a Español">ES</button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menu">☰</button>
       </div>
 
     </div>
