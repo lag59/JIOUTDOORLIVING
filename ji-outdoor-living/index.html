@@ -213,6 +213,32 @@
       background: var(--green-dark);
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .lang-toggle {
+      border: 1px solid var(--green);
+      background: transparent;
+      color: var(--green);
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      padding: 9px 13px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .lang-toggle:hover {
+      background: var(--green);
+      color: #fff;
+    }
+
     /* =========================
        HERO
     ========================== */
@@ -744,6 +770,24 @@
       border-color: var(--green-light);
     }
 
+    .footer-credit {
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.55);
+      padding-top: 16px;
+      margin-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-credit a {
+      color: var(--green-light);
+      font-weight: 600;
+    }
+
+    .footer-credit a:hover {
+      text-decoration: underline;
+    }
+
     /* =========================
        MOBILE MENU
     ========================== */
@@ -921,17 +965,21 @@
       </button>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#services">SERVICES</a>
-        <a href="#gallery">GALLERY</a>
-        <a href="#process">PROCESS</a>
-        <a href="#contact">CONTACT</a>
+        <a href="#home" data-en="HOME" data-es="INICIO">HOME</a>
+        <a href="#about" data-en="ABOUT" data-es="NOSOTROS">ABOUT</a>
+        <a href="#services" data-en="SERVICES" data-es="SERVICIOS">SERVICES</a>
+        <a href="#gallery" data-en="GALLERY" data-es="GALERÍA">GALLERY</a>
+        <a href="#quote" data-en="QUOTE" data-es="COTIZAR">QUOTE</a>
+        <a href="#contact" data-en="CONTACT" data-es="CONTACTO">CONTACT</a>
 
-        <a class="quote-btn" href="#quote">
+        <a class="quote-btn" href="#quote" data-en="GET A FREE QUOTE" data-es="COTIZACIÓN GRATIS">
           GET A FREE QUOTE
         </a>
       </nav>
+
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar a Español">ES</button>
+      </div>
 
     </div>
   </header>
@@ -949,12 +997,12 @@
 
         <div class="hero-content">
 
-          <h1>
+          <h1 data-en="Outdoor Spaces&lt;br&gt;Designed For Life." data-es="Espacios Exteriores&lt;br&gt;Diseñados Para la Vida.">
             Outdoor Spaces<br>
             Designed For Life.
           </h1>
 
-          <p>
+          <p data-en="Custom outdoor living spaces, paver patios, masonry, outdoor kitchens, fireplaces, and more — built with premium craftsmanship and timeless design." data-es="Espacios de vida al aire libre a medida, patios de adoquines, mampostería, cocinas exteriores, chimeneas y más, construidos con artesanía premium y un diseño atemporal.">
             Custom outdoor living spaces, paver patios, masonry,
             outdoor kitchens, fireplaces, and more — built with
             premium craftsmanship and timeless design.
@@ -962,11 +1010,11 @@
 
           <div class="hero-buttons">
 
-            <a href="#gallery" class="btn btn-primary">
+            <a href="#gallery" class="btn btn-primary" data-en="View Our Work" data-es="Ver Nuestro Trabajo">
               View Our Work
             </a>
 
-            <a href="tel:+19192180454" class="btn btn-outline">
+            <a href="tel:+19192180454" class="btn btn-outline" data-en="☎ Call Now" data-es="☎ Llámenos">
               ☎ &nbsp; Call Now
             </a>
 
@@ -988,7 +1036,7 @@
       <div class="container">
 
         <div class="section-heading">
-          <h2>Our Services</h2>
+          <h2 data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
         </div>
 
         <div class="service-grid">
@@ -1002,7 +1050,7 @@
               decoding="async"
             />
             <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
-            <h3>Paver Patios & Walkways</h3>
+            <h3 data-en="Paver Patios &amp; Walkways" data-es="Patios y Senderos de Adoquines">Paver Patios & Walkways</h3>
           </article>
 
 
@@ -1015,7 +1063,7 @@
               decoding="async"
             />
             <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16a8 8 0 0 1-8 8 8 8 0 0 1-8-8Z"/><line x1="9" y1="15.5" x2="7.5" y2="21"/><line x1="15" y1="15.5" x2="16.5" y2="21"/><line x1="8" y1="4.5" x2="8" y2="8"/><line x1="12" y1="3.5" x2="12" y2="8"/><line x1="16" y1="4.5" x2="16" y2="8"/></svg></div>
-            <h3>Outdoor Kitchens</h3>
+            <h3 data-en="Outdoor Kitchens" data-es="Cocinas Exteriores">Outdoor Kitchens</h3>
           </article>
 
 
@@ -1028,7 +1076,7 @@
               decoding="async"
             />
             <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3 4.5 5 4.5 9A4.5 4.5 0 0 1 7 11c0-2 1-3 2-4 .2 2 1.2 2.8 2 3-1-3 1-5.5 1-8Z"/></svg></div>
-            <h3>Outdoor Fireplaces & Fire Pits</h3>
+            <h3 data-en="Outdoor Fireplaces &amp; Fire Pits" data-es="Chimeneas y Fogatas Exteriores">Outdoor Fireplaces & Fire Pits</h3>
           </article>
 
 
@@ -1041,7 +1089,7 @@
               decoding="async"
             />
             <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="3" y1="9.3" x2="21" y2="9.3"/><line x1="3" y1="14.6" x2="21" y2="14.6"/><line x1="9" y1="4" x2="9" y2="9.3"/><line x1="15" y1="9.3" x2="15" y2="14.6"/><line x1="9" y1="14.6" x2="9" y2="20"/></svg></div>
-            <h3>Stone & Brick Masonry</h3>
+            <h3 data-en="Stone &amp; Brick Masonry" data-es="Mampostería de Piedra y Ladrillo">Stone & Brick Masonry</h3>
           </article>
 
 
@@ -1054,7 +1102,7 @@
               decoding="async"
             />
             <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.7"/><path d="M10.7 6.4 4 20"/><path d="M13.3 6.4 20 20"/><path d="M8 14h8"/></svg></div>
-            <h3>Hardscape Design</h3>
+            <h3 data-en="Hardscape Design" data-es="Diseño de Paisajismo">Hardscape Design</h3>
           </article>
 
 
@@ -1067,7 +1115,7 @@
               decoding="async"
             />
             <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10.2V20h14v-9.8"/><path d="M9.5 20v-6h5v6"/></svg></div>
-            <h3>Custom Outdoor Living Spaces</h3>
+            <h3 data-en="Custom Outdoor Living Spaces" data-es="Espacios de Vida Exterior a Medida">Custom Outdoor Living Spaces</h3>
           </article>
 
         </div>
@@ -1086,7 +1134,7 @@
       <div class="container">
 
         <div class="section-heading">
-          <h2>Featured Projects</h2>
+          <h2 data-en="Featured Projects" data-es="Proyectos Destacados">Featured Projects</h2>
         </div>
 
         <div class="project-grid">
@@ -1118,7 +1166,7 @@
         </div>
 
         <div class="gallery-action">
-          <a href="#" class="btn btn-primary">
+          <a href="#" class="btn btn-primary" data-en="View Full Gallery" data-es="Ver Galería Completa">
             View Full Gallery
           </a>
         </div>
@@ -1138,7 +1186,7 @@
 
         <div class="value-intro">
 
-          <h2>
+          <h2 data-en="Built For Nature.&lt;br&gt;Designed For Life." data-es="Hecho Para la Naturaleza.&lt;br&gt;Diseñado Para la Vida.">
             Built For Nature.<br>
             Designed For Life.
           </h2>
@@ -1147,7 +1195,7 @@
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13C4 8 8 4 20 4c0 12-4 16-9 16Z"/><path d="M4 20c2-4.5 5.5-7.5 10-9.5"/></svg>
           </div>
 
-          <p>
+          <p data-en="We bring your outdoor vision to life with craftsmanship, quality materials, and a passion for creating spaces that last for generations." data-es="Damos vida a su visión exterior con artesanía, materiales de calidad y pasión por crear espacios que perduran por generaciones.">
             We bring your outdoor vision to life with craftsmanship,
             quality materials, and a passion for creating spaces that
             last for generations.
@@ -1161,9 +1209,9 @@
           <article class="value-card">
             <div class="value-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.7 7 22l5-3 5 3-1.5-8.3"/></svg></div>
 
-            <h3>Premium Craftsmanship</h3>
+            <h3 data-en="Premium Craftsmanship" data-es="Artesanía Premium">Premium Craftsmanship</h3>
 
-            <p>
+            <p data-en="Expertly built with attention to detail and timeless design." data-es="Construido por expertos con atención al detalle y diseño atemporal.">
               Expertly built with attention to detail and timeless design.
             </p>
           </article>
@@ -1172,9 +1220,9 @@
           <article class="value-card">
             <div class="value-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M2 13l10 5 10-5"/></svg></div>
 
-            <h3>Quality Materials</h3>
+            <h3 data-en="Quality Materials" data-es="Materiales de Calidad">Quality Materials</h3>
 
-            <p>
+            <p data-en="We use only the best stone, pavers, and materials that last." data-es="Usamos solo la mejor piedra, adoquines y materiales que perduran.">
               We use only the best stone, pavers, and materials that last.
             </p>
           </article>
@@ -1183,9 +1231,9 @@
           <article class="value-card">
             <div class="value-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></div>
 
-            <h3>Custom Design</h3>
+            <h3 data-en="Custom Design" data-es="Diseño Personalizado">Custom Design</h3>
 
-            <p>
+            <p data-en="Every project is customized to fit your style and needs." data-es="Cada proyecto se personaliza según su estilo y necesidades.">
               Every project is customized to fit your style and needs.
             </p>
           </article>
@@ -1194,9 +1242,9 @@
           <article class="value-card">
             <div class="value-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 7.6 8 9 4.5-1.4 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
 
-            <h3>Reliable Service</h3>
+            <h3 data-en="Reliable Service" data-es="Servicio Confiable">Reliable Service</h3>
 
-            <p>
+            <p data-en="Clear communication, on-time completion, and your satisfaction is our priority." data-es="Comunicación clara, entrega puntual y su satisfacción es nuestra prioridad.">
               Clear communication, on-time completion, and your satisfaction
               is our priority.
             </p>
@@ -1218,11 +1266,11 @@
       <div class="container quote-wrap">
 
         <div class="section-heading">
-          <h2>Request A Free Quote</h2>
+          <h2 data-en="Request A Free Quote" data-es="Solicite una Cotización Gratis">Request A Free Quote</h2>
         </div>
 
         <div class="quote-intro">
-          <p>
+          <p data-en="Tell us about your project and we'll get back to you with a free, no-obligation estimate." data-es="Cuéntenos sobre su proyecto y le responderemos con un presupuesto gratuito y sin compromiso.">
             Tell us about your project and we'll get back to you with a
             free, no-obligation estimate.
           </p>
@@ -1233,41 +1281,41 @@
           <div class="form-row">
 
             <div class="field">
-              <label for="qf-name">Name</label>
+              <label for="qf-name" data-en="Name" data-es="Nombre">Name</label>
               <input type="text" id="qf-name" name="name" required autocomplete="name" />
             </div>
 
             <div class="field">
-              <label for="qf-phone">Phone</label>
+              <label for="qf-phone" data-en="Phone" data-es="Teléfono">Phone</label>
               <input type="tel" id="qf-phone" name="phone" autocomplete="tel" />
             </div>
 
             <div class="field">
-              <label for="qf-email">Email</label>
+              <label for="qf-email" data-en="Email" data-es="Correo Electrónico">Email</label>
               <input type="email" id="qf-email" name="email" required autocomplete="email" />
             </div>
 
             <div class="field">
-              <label for="qf-service">Service Needed</label>
+              <label for="qf-service" data-en="Service Needed" data-es="Servicio Requerido">Service Needed</label>
               <select id="qf-service" name="service">
-                <option value="Paver Patios & Walkways">Paver Patios & Walkways</option>
-                <option value="Outdoor Kitchens">Outdoor Kitchens</option>
-                <option value="Outdoor Fireplaces & Fire Pits">Outdoor Fireplaces & Fire Pits</option>
-                <option value="Stone & Brick Masonry">Stone & Brick Masonry</option>
-                <option value="Hardscape Design">Hardscape Design</option>
-                <option value="Custom Outdoor Living Spaces">Custom Outdoor Living Spaces</option>
-                <option value="Other / Not Sure">Other / Not Sure</option>
+                <option value="Paver Patios & Walkways" data-en="Paver Patios &amp; Walkways" data-es="Patios y Senderos de Adoquines">Paver Patios & Walkways</option>
+                <option value="Outdoor Kitchens" data-en="Outdoor Kitchens" data-es="Cocinas Exteriores">Outdoor Kitchens</option>
+                <option value="Outdoor Fireplaces & Fire Pits" data-en="Outdoor Fireplaces &amp; Fire Pits" data-es="Chimeneas y Fogatas Exteriores">Outdoor Fireplaces & Fire Pits</option>
+                <option value="Stone & Brick Masonry" data-en="Stone &amp; Brick Masonry" data-es="Mampostería de Piedra y Ladrillo">Stone & Brick Masonry</option>
+                <option value="Hardscape Design" data-en="Hardscape Design" data-es="Diseño de Paisajismo">Hardscape Design</option>
+                <option value="Custom Outdoor Living Spaces" data-en="Custom Outdoor Living Spaces" data-es="Espacios de Vida Exterior a Medida">Custom Outdoor Living Spaces</option>
+                <option value="Other / Not Sure" data-en="Other / Not Sure" data-es="Otro / No Estoy Seguro">Other / Not Sure</option>
               </select>
             </div>
 
             <div class="field full">
-              <label for="qf-message">Project Details</label>
-              <textarea id="qf-message" name="message" placeholder="Tell us about your project, location, timeline, and budget."></textarea>
+              <label for="qf-message" data-en="Project Details" data-es="Detalles del Proyecto">Project Details</label>
+              <textarea id="qf-message" name="message" placeholder="Tell us about your project, location, timeline, and budget." data-en-ph="Tell us about your project, location, timeline, and budget." data-es-ph="Cuéntenos sobre su proyecto, ubicación, plazos y presupuesto."></textarea>
             </div>
 
           </div>
 
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary" data-en="Send My Quote Request" data-es="Enviar Mi Solicitud">
             Send My Quote Request
           </button>
 
@@ -1302,11 +1350,11 @@
 
         <div class="contact-info">
 
-          <h2>
+          <h2 data-en="Ready To Build Your Dream Outdoor Space?" data-es="¿Listo Para Construir el Espacio Exterior de Sus Sueños?">
             Ready To Build Your Dream Outdoor Space?
           </h2>
 
-          <p>
+          <p data-en="Let's create an outdoor space you'll enjoy for years to come." data-es="Creemos un espacio exterior que disfrutará por muchos años.">
             Let's create an outdoor space you'll enjoy for years to come.
           </p>
 
@@ -1320,7 +1368,7 @@
               <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
 
               <div>
-                <small>Call / Text</small>
+                <small data-en="Call / Text" data-es="Llamar / Texto">Call / Text</small>
                 <strong>+1 (919) 218-0454</strong>
               </div>
             </a>
@@ -1333,7 +1381,7 @@
               <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6.5 10 7 10-7"/></svg></div>
 
               <div>
-                <small>Email</small>
+                <small data-en="Email" data-es="Correo">Email</small>
                 <strong>jaimeoutdoorliving@gmail.com</strong>
               </div>
             </a>
@@ -1402,7 +1450,7 @@
 
     <div class="container footer-inner">
 
-      <p>
+      <p data-en="© 2026 J&amp;I Outdoor Living. All Rights Reserved." data-es="© 2026 J&amp;I Outdoor Living. Todos los Derechos Reservados.">
         © 2026 J&I Outdoor Living. All Rights Reserved.
       </p>
 
@@ -1420,6 +1468,11 @@
 
       </div>
 
+    </div>
+
+    <div class="container footer-credit">
+      <span data-en="Powered by" data-es="Desarrollado por">Powered by</span>
+      <a href="https://andreabilingualcpr.com/" target="_blank" rel="noopener">MDM Creation</a>
     </div>
 
   </footer>
@@ -1441,6 +1494,42 @@
     });
 
 
+    // Language toggle (English / Spanish)
+    const LANG_KEY = "jioutdoor-lang";
+    const langToggle = document.getElementById("langToggle");
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-en]").forEach(el => {
+        const val = el.getAttribute("data-" + lang);
+        if (val !== null) el.innerHTML = val;
+      });
+
+      document.querySelectorAll("[data-en-ph]").forEach(el => {
+        const val = el.getAttribute("data-" + lang + "-ph");
+        if (val !== null) el.setAttribute("placeholder", val);
+      });
+
+      langToggle.textContent = lang === "en" ? "ES" : "EN";
+      langToggle.setAttribute(
+        "aria-label",
+        lang === "en" ? "Cambiar a Español" : "Switch to English"
+      );
+
+      try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+    }
+
+    let currentLang = "en";
+    try { currentLang = localStorage.getItem(LANG_KEY) || "en"; } catch (e) {}
+    applyLang(currentLang);
+
+    langToggle.addEventListener("click", () => {
+      currentLang = document.documentElement.lang === "en" ? "es" : "en";
+      applyLang(currentLang);
+    });
+
+
     // Quote form -> composes an email to the business address
     const BUSINESS_EMAIL = "jaimeoutdoorliving@gmail.com";
     const quoteForm = document.getElementById("quoteForm");
@@ -1459,15 +1548,21 @@
 
       quoteNote.classList.remove("error");
 
+      const es = document.documentElement.lang === "es";
+
       if (!data.name || !data.email) {
-        quoteNote.textContent = "Please enter your name and email.";
+        quoteNote.textContent = es
+          ? "Por favor ingrese su nombre y correo electrónico."
+          : "Please enter your name and email.";
         quoteNote.classList.add("error");
         return;
       }
 
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(data.email)) {
-        quoteNote.textContent = "Please enter a valid email address.";
+        quoteNote.textContent = es
+          ? "Por favor ingrese un correo electrónico válido."
+          : "Please enter a valid email address.";
         quoteNote.classList.add("error");
         return;
       }
@@ -1487,9 +1582,9 @@
 
       window.location.href = mailto;
 
-      quoteNote.textContent =
-        "Opening your email app to send the request. If nothing happens, email us at " +
-        BUSINESS_EMAIL + ".";
+      quoteNote.textContent = es
+        ? "Abriendo su aplicación de correo para enviar la solicitud. Si no ocurre nada, escríbanos a " + BUSINESS_EMAIL + "."
+        : "Opening your email app to send the request. If nothing happens, email us at " + BUSINESS_EMAIL + ".";
     });
 
   </script>
