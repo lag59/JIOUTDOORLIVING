@@ -1,2 +1,6 @@
-﻿[build]
+[build]
   publish = "ji-outdoor-living"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
