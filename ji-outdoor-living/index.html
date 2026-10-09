@@ -827,7 +827,7 @@
       }
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 1100px) {
 
       .nav-inner {
         min-height: 90px;
@@ -866,6 +866,10 @@
         opacity: 1;
         pointer-events: auto;
       }
+
+    }
+
+    @media (max-width: 850px) {
 
       .hero {
         min-height: 560px;
@@ -943,6 +947,125 @@
       }
     }
 
+    /* MDM SOCIAL GALLERY */
+
+    .mdm-social-gallery {
+      padding: 90px 20px;
+      background: #f7f7f5;
+      scroll-margin-top: 130px;
+    }
+
+    .mdm-gallery-wrapper {
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    .mdm-gallery-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .mdm-gallery-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #657665;
+    }
+
+    .mdm-gallery-heading h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      margin: 15px 0;
+      color: #243b32;
+    }
+
+    .mdm-gallery-heading p {
+      max-width: 700px;
+      margin: auto;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .mdm-gallery-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 35px;
+    }
+
+    .mdm-filter {
+      padding: 12px 22px;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      background: white;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .mdm-filter:hover,
+    .mdm-filter.active {
+      background: #243b32;
+      color: white;
+    }
+
+    .mdm-filter:focus-visible {
+      outline: 3px solid #657665;
+      outline-offset: 3px;
+    }
+
+    .mdm-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .mdm-gallery-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .mdm-gallery-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s;
+    }
+
+    .mdm-gallery-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .mdm-gallery-caption {
+      padding: 14px;
+      font-size: 15px;
+      color: #243b32;
+    }
+
+    #mdm-gallery-status {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+    }
+
+    .mdm-gallery-footer {
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .mdm-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mdm-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 
@@ -968,6 +1091,7 @@
         <a href="#about" data-en="ABOUT" data-es="NOSOTROS">ABOUT</a>
         <a href="#services" data-en="SERVICES" data-es="SERVICIOS">SERVICES</a>
         <a href="#gallery" data-en="GALLERY" data-es="GALERÍA">GALLERY</a>
+        <a href="#social-gallery" data-en="Social Gallery" data-es="Galería Social">Social Gallery</a>
         <a href="#quote" data-en="QUOTE" data-es="COTIZAR">QUOTE</a>
         <a href="#contact" data-en="CONTACT" data-es="CONTACTO">CONTACT</a>
 
@@ -1440,6 +1564,37 @@
 
     </section>
 
+    <!-- MDM SOCIAL AUTOGALLERY -->
+
+    <section id="social-gallery" class="mdm-social-gallery" aria-labelledby="mdm-gallery-title">
+      <div class="mdm-gallery-wrapper">
+        <div class="mdm-gallery-heading">
+          <span class="mdm-gallery-label">J&amp;I OUTDOOR LIVING</span>
+          <h2 id="mdm-gallery-title" data-en="Our Work. Your Inspiration." data-es="Nuestro trabajo. Tu inspiración.">Our Work. Your Inspiration.</h2>
+          <p data-en="Explore our latest outdoor transformations, custom pools, beautiful patios, outdoor kitchens, fireplaces, and landscaping projects." data-es="Explora nuestras últimas transformaciones de exteriores, piscinas personalizadas, hermosos patios, cocinas al aire libre, chimeneas y proyectos de paisajismo.">
+            Explore our latest outdoor transformations,
+            custom pools, beautiful patios, outdoor kitchens,
+            fireplaces, and landscaping projects.
+          </p>
+        </div>
+
+        <div class="mdm-gallery-filters">
+          <button type="button" class="mdm-filter active" data-category="all" aria-pressed="true" data-en="All Projects" data-es="Todos los proyectos">All Projects</button>
+          <button type="button" class="mdm-filter" data-category="pools" aria-pressed="false" data-en="Pools" data-es="Piscinas">Pools</button>
+          <button type="button" class="mdm-filter" data-category="patios" aria-pressed="false" data-en="Patios" data-es="Patios">Patios</button>
+          <button type="button" class="mdm-filter" data-category="outdoor-kitchens" aria-pressed="false" data-en="Outdoor Kitchens" data-es="Cocinas al aire libre">Outdoor Kitchens</button>
+          <button type="button" class="mdm-filter" data-category="landscaping" aria-pressed="false" data-en="Landscaping" data-es="Paisajismo">Landscaping</button>
+        </div>
+
+        <div id="mdm-gallery-grid" class="mdm-gallery-grid"></div>
+        <p id="mdm-gallery-status" role="status" aria-live="polite" data-en="Loading our latest projects..." data-es="Cargando nuestros últimos proyectos...">Loading our latest projects...</p>
+
+        <div class="mdm-gallery-footer">
+          <p data-en="Follow our latest projects and outdoor transformations." data-es="Sigue nuestros últimos proyectos y transformaciones de exteriores.">Follow our latest projects and outdoor transformations.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
 
@@ -1590,5 +1745,6 @@
 
   </script>
 
+  <script src="/social-gallery.js" defer></script>
 </body>
 </html>
